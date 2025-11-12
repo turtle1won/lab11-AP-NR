@@ -21,26 +21,23 @@ def hypotenuse(a,b):
 def add(a, b): 
     return a + b
 
-def sub(a,b):
-    return a-b
+def sub(a, b):
+    return a - b
 
-def mul(a,b):
+def mul(a, b):
     return a * b
 
-def div(a,b):
-    try:
+def div(a, b):
+    if a == 0:
+        raise(ZeroDivisionError)
+    else:
         return b / a
-    except ZeroDivisionError:
-        raise ZeroDivisionError
 
-def log(a,b):
-    try:
-        return math.log(a,b)
-    except ValueError:
-        raise ValueError
+def log(a, b):
+    if a <= 0 or b <= 0:
+        raise(ValueError)
+    return math.log(b, a)
 
-def exp(a,b):
-    return a ** b
-
-
+def exp(a, b):
+    return a**b
 
