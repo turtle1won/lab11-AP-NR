@@ -59,7 +59,7 @@ class TestCalculator(unittest.TestCase):
     #     #     logarithm(0, 5)
     #     fill in code
 
-    def test_log_ivalid_argument(self):
+    def test_log_invalid_argument(self):
         with self.assertRaises(ValueError):
             logarithm(5, -1)
 
