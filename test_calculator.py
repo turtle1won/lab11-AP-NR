@@ -1,3 +1,7 @@
+# https://github.com/turtle1won/lab11-AP-NR.git
+# Partner 1: Aditya Patel
+# Partner 2: Nyden Rodewald
+
 import unittest
 from calculator import *
 
@@ -33,7 +37,7 @@ class TestCalculator(unittest.TestCase):
         self.assertAlmostEqual(log(16, 64), 1.5)
 
     def test_log_invalid_base(self): # 1 assertion
-        with self.assertRaises(ZeroDivisionError):
+        with self.assertRaises(ValueError):
             log(0, 5)
     
     ######## Partner 1
