@@ -1,3 +1,6 @@
+# https://github.com/turtle1won/lab11-AP-NR.git
+# Partner 1: Aditya Patel
+# Partner 2: Nyden Rodewald
 """
 calculator.py
 - Defines functions used to create a simple calculator
