@@ -21,9 +21,19 @@ class TestCalculator(unittest.TestCase):
     ######## Partner 1
     # def test_multiply(self): # 3 assertions
     #     fill in code
+    def test_multiply(self):
+        self.assertEqual(mul(2,3), 6)
+        self.assertEqual(mul(-4,4),-16)
+        self.assertEqual(mul(-2,-3),6)
+
 
     # def test_divide(self): # 3 assertions
     #     fill in code
+
+    def test_divide(self):
+        self.assertEqual(div(6,3), 2)
+        self.assertEqual(div(-4,4),-1)
+        self.assertAlmostEqual(div(3,1),.67,places = 2)
     # ##########################
 
     ######## Partner 2
@@ -47,15 +57,31 @@ class TestCalculator(unittest.TestCase):
     #     #     logarithm(0, 5)
     #     fill in code
 
+    def test_log_ivalid_argument(self):
+        with self.assertRaises(ValueError):
+            log(0,5)
+
     # def test_hypotenuse(self): # 3 assertions
     #     fill in code
 
+    def test_hypotenuse(self):
+        self.assertEqual(hypotenuse(3,4),25)
+        self.assertEqual(hypotenuse(5,12), 169)
+        self.assertEqual(hypotenuse(-8,-15),289)
     # def test_sqrt(self): # 3 assertions
     #     # Test for invalid argument, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #    square_root(NUM)
     #     # Test basic function
     #     fill in code
+
+
+    def test_sqrt(self):
+        with self.assertRaises(TypeError):
+            square_root(-36)
+        self.assertEqual(square_root(36),6)
+        self.assertEqual(square_root(25),5)
+
     ##########################
 
 # Do not touch this
